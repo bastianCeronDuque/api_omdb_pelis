@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+// -------------------PALETA DE COLORES---------------------
+:root {
+    --void: hsl(256, 33%, 6%);
+    --fuschia: hsl(283, 57%, 50%);
+    --jewel: hsl(252, 92%, 52%);
+    --stark: hsl(12, 17%, 88%);
+    --voidi: hsl(258, 50%, 10%);
+}
+body {
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    background-color: var(--void);
+}
+
+// -------------------INICIO NAV---------------------
+.topnav {
+    overflow: hidden;
+    background-color: var(--voidi);
+    a {
+        float: left;
+        display: block;
+        color: var(--stark);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    a:hover {
+        background-color: var(--stark);
+        color: black;
+    }
+    a.active {
+        background-color: var(--fuschia);
+        color: white;
+    }
+    .kart {
+        float: right;
+    }
+}
+// -------------------INICIO CARD---------------------
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.card {
+    box-shadow: 0 4px 8px 0px rgba(85, 84, 84, 0.2);
+    transition: 0.3s;
+    width: 250px;
+    height: 560px;
+    border-radius: 10px;
+    margin: 10px;
+
+    .img {
+        border-radius: 10px 10px 0 0;
+        height: 300px;
+        width: 250px;
+    }
+    p,
+    h3 {
+        text-align: center;
+        color: var(--stark);
+    }
+    h4 {
+        text-align: center;
+        color: var(--stark);
+        margin-top: 0px;
+        height: 40px;
+        font-size: 17px;
+    }
+    #button {
+        float: right;
+        border-radius: 4px;
+        background-color: var(--fuschia);
+        border: none;
+        color: var(--stark);
+        text-align: center;
+        font-size: 20px;
+        height: 40px;
+        width: 150px;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    #button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    #button span:after {
+        content: "\00bb";
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    #button:hover span {
+        padding-right: 25px;
+    }
+
+    #button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+}
+.card:hover {
+    box-shadow: 0 15px 25px 0 rgba(150, 149, 149, 0.2);
+}
+.container {
+    padding: 2px 16px;
+}
+// --------------------------INICIO ESTILO TABLA---------------------------------
+h2 {
+    color: var(--stark);
+    text-align: center;
+}
+.tab {
+    display: grid;
+    justify-content: center;
+}
+table {
+    border-collapse: collapse;
+    width: 800px;
+    th,
+    td {
+        text-align: left;
+        padding: 8px;
+    }
+    tr {
+        background-color: var(--stark);
+    }
+    th {
+        background-color: #04aa6d;
+        color: white;
+    }
+}
