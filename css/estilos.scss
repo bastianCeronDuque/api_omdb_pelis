@@ -79,7 +79,6 @@ body {
         font-size: 17px;
     }
     #button {
-        float: right;
         border-radius: 4px;
         background-color: var(--fuschia);
         border: none;
@@ -87,7 +86,7 @@ body {
         text-align: center;
         font-size: 20px;
         height: 40px;
-        width: 150px;
+        width: 100%;
         transition: all 0.5s;
         cursor: pointer;
     }
