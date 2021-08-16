@@ -1,5 +1,5 @@
 
-const url = 'http://www.omdbapi.com/?s=batman&apikey=56c451ce'
+const url = 'https://www.omdbapi.com/?s=batman&apikey=56c451ce'
 fetch(url)
     .then(data => {
         return data.json()
